@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import InputField from "@/components/common/input";
+import InputField from "@/components/common/Input";
+import SelectField from "@/components/common/Select";
 import Loading from "@/components/common/Loading";
 import { useUser } from "@/context/userContext";
 import { siteConfig } from "@/site.config";
@@ -8,6 +9,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useAccount } from "wagmi";
+import { countries } from "@/constants/countries";
 
 export default function Home() {
   const router = useRouter();
@@ -109,7 +111,8 @@ export default function Home() {
               />
             </div>
             <div className="mt-4">
-              <InputField
+              <SelectField
+                options={countries}
                 value={country}
                 placeholder={"Country"}
                 onChange={(e) => setCountry(e)}
