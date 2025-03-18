@@ -19,7 +19,7 @@
     "@types/mapbox__rehype-prism": "^0.8.0",
     "dayjs": "^1.11.7",
     "ethers": "^5.7.2",
-    "firebase": "^9.17.1",
+    "firebase": "^10.0.0",
     "glob": "^8.1.0",
     "gray-matter": "^4.0.3",
     "next": "13.1.6",
